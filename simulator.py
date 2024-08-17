@@ -1,5 +1,6 @@
 # This code resolve the problem using python
 
+
 def covert_timezone(partida, origem, destino):
     return destino - origem + partida
 

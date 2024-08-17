@@ -1,1 +1,90 @@
 # This is the code to be imported in https://turingmachine.io/
+
+# Adds 1 to a binary number.
+input: 'o11o11#111#11'
+blank: ' '
+start state: start
+table:
+  # scan to the rightmost digit
+  start:
+    'o': {write: ' ', R: negative} 
+    'l': {write: ' ', R: positive} 
+    '0': {L: divide}
+    '1': {L: divide}
+
+  divide:
+    ' ': {R: d1}
+
+  d1:
+    '0': { write: ' ', R: d2}
+    '1': { write: ' ', R: d2}
+  d2:
+    '0': { write: ' ', R: add_1}
+    '1': { write: ' ', R: add_1}
+
+  negative:
+    '+': {R: positive} # significa que essa é a segunda entrada
+    '-': {R: positive} # significa que essa é a segunda entrada
+    '0': R
+    '1': R
+    'o': R
+    'l': R
+    '#': R
+    ' ': {write: '-', L: reset}
+
+  positive:
+    '0': R
+    '1': R
+    'o': R
+    'l': R
+    '#': R
+    ' ': {write: '+', L: reset}
+
+  add_1:
+    'o': R
+    'l': R
+    '#': R
+    '0': R
+    '1': R
+    '+': R
+    '-': R
+    ' ': {write: 1, L: reset}
+
+  sub_1:
+    'o': R
+    'l': R
+    '#': R
+    '0': R
+    '1': R
+    '+': R
+    '-': R
+    ' ': {L: pop}
+
+  pop:
+    '1': {L: reset}
+
+  reset:
+    '0': L
+    '1': L
+    '+': L
+    '-': L
+    'o': L
+    'l': L
+    '#': L
+    ' ': {R: start}
+    
+
+
+# Exercises:
+
+# • Modify the machine to always halt on the leftmost digit
+#   (regardless of the number's length).
+#   Hint: add a state between carry and done.
+
+# • Make a machine that adds 2 instead of 1.
+#   Hint: 2 is '10' in binary, so the last digit is unaffected.
+#   Alternative hint: chain together two copies of the machine from
+#   the first exercise (renaming the states of the second copy).
+
+# • Make a machine to subtract 1.
+#   To simplify things, assume the input is always greater than 0.
