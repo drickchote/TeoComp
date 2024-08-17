@@ -1,0 +1,1 @@
+# This code resolve the problem using python
