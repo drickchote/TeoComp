@@ -1,4 +1,4 @@
-# Funcionamento (exemplo minimalista)
+# Funcionamento (exemplo minimalista - veja o arquivo minimalist.yaml)
 ### Esse exemplo considera os graus como múltiplos de 2 ao invés de 15
 
 # Ideia geral:
