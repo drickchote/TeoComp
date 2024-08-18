@@ -34,8 +34,9 @@ Prática de Implementação: Máquina de Turing - Teoria da Computação.
 </p>
 
 ## 💻 Sobre o projeto
-Funcionamento (exemplo minimalista - veja o arquivo minimalist.yaml)
-Esse exemplo considera os graus como múltiplos de 2 ao invés de 15
+Funcionamento (exemplo minimalista - veja o arquivo minimalist.yaml).
+
+Esse exemplo considera os graus como múltiplos de 2 ao invés de 15.
 
 ## ⚙️ Funcionamento
 Converter a entrada em operações matemáticas com somas e subtrações. 
