@@ -8,7 +8,7 @@ def get_timezone_signal(is_east, time):
     return -(time) if is_east else time
 
 
-origem_oeste = False # altere aqui para mudar para oeste ou leste
+origem_oeste = True # altere aqui para mudar para oeste ou leste
 destino_oeste = True # altere aqui para mudar para oeste ou leste
 
 fuso_destino = get_timezone_signal(destino_oeste, int(input()) / 2)

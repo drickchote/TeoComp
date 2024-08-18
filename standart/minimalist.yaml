@@ -1,4 +1,4 @@
-input: 'o11o11#111#11'
+input: 'o11o110111011'
 blank: ' '
 start state: start
 table:
@@ -6,7 +6,7 @@ table:
     'o': {write: ' ', R: negative} 
     'l': {write: ' ', R: positive} 
     '1': {L: divide}
-    '#': {write: '+', R: format}
+    '0': {write: '+', R: format}
     '+': {write: ' ', R: sum}
     '-': {write: ' ', R: sub}
     '*': {write: ' ', R}
@@ -27,7 +27,6 @@ table:
     'o': R
     'l': R
     '*': R
-    '#': R
     ' ': {write: '-', L: reset}
 
   positive:
@@ -38,15 +37,13 @@ table:
     'o': R
     'l': R
     '*': R
-    '#': R
     ' ': {write: '+', L: reset}
 
   add_1:
     'o': R
     'l': R
-    '#': R
-    '*': R
     '0': R
+    '*': R
     '1': R
     '+': R
     '-': R
@@ -55,7 +52,6 @@ table:
   sub_1:
     'o': R
     'l': R
-    '#': R
     '0': R
     '*': R
     '1': R
@@ -72,7 +68,7 @@ table:
     '-': L
     'o': L
     'l': L
-    '#': L
+    '0': L
     '*': L
     ' ': {R: start}
 
@@ -80,7 +76,7 @@ table:
     '1': R
     '-': R
     '+': R
-    '#': {write: '+', R}
+    '0': {write: '+', R}
     ' ': {write: '*', L: reset}
 
   sum:
