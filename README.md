@@ -1,7 +1,43 @@
-# Funcionamento (exemplo minimalista - veja o arquivo minimalist.yaml)
+# viagem-ao-mundo
+
+Prática de Implementação: Máquina de Turing - Teoria da Computação.
+
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/drickchote/TeoComp?color=%2304D361">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/drickchote/TeoComp">
+  
+  <a href="https://github.com/caiovinisl/metodos-hashing/commits/main">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/drickchote/TeoComp">
+  </a>
+   
+   <a href="https://github.com/drickchote/TeoComp/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/drickchote/TeoComp?style=social">
+  </a>
+  
+ 
+</p>
+
+<h4 align="center"> 
+	🚧 Viagem ao Mundo 🚧
+</h4>
+
+<p align="center">
+	<img alt="Status Concluído" src="https://img.shields.io/badge/STATUS-CONCLU%C3%8DDO-brightgreen">
+</p>
+
+<p align="center">
+ <a href="#-sobre-o-projeto">Sobre</a> •
+ <a href="#-funcionalidades">Funcionalidades</a> •
+ <a href="#-como-executar-o-projeto">Como executar</a> • 
+ <a href="#-tecnologias">Tecnologias</a>
+</p>
+
+## 💻 Sobre o projeto
+### Funcionamento (exemplo minimalista - veja o arquivo minimalist.yaml)
 ### Esse exemplo considera os graus como múltiplos de 2 ao invés de 15
 
-# Ideia geral:
+## Ideia geral:
 converter a entrada em operações matemáticas com somas e subtrações. 
 O primeiro passo consiste em converter o11o11#111#11 para +111+11-1+1*
 
@@ -59,3 +95,14 @@ destino, origem, horário de saída, duração respectivamente
 10. +*11111 -> remove o + e volta pro "sum"
 11. *11111 -> remove o asterístico e volta pro end
 11. 11111
+
+## 🛣️ Como executar o projeto
+
+#### 🎲 Rodando a aplicação
+
+## 🛠 Tecnologias
+
+- **[Python](https://www.python.org/)**
+- **[Turing Machine Vizualization](https://turingmachine.io/)**
+
+---
