@@ -28,17 +28,17 @@ Prática de Implementação: Máquina de Turing - Teoria da Computação.
 
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
- <a href="#-funcionalidades">Funcionalidades</a> •
+ <a href="#-funcionamento">Funcionamento</a> •
  <a href="#-como-executar-o-projeto">Como executar</a> • 
  <a href="#-tecnologias">Tecnologias</a>
 </p>
 
 ## 💻 Sobre o projeto
-### Funcionamento (exemplo minimalista - veja o arquivo minimalist.yaml)
-### Esse exemplo considera os graus como múltiplos de 2 ao invés de 15
+Funcionamento (exemplo minimalista - veja o arquivo minimalist.yaml)
+Esse exemplo considera os graus como múltiplos de 2 ao invés de 15
 
-## Ideia geral:
-converter a entrada em operações matemáticas com somas e subtrações. 
+## ⚙️ Funcionamento
+Converter a entrada em operações matemáticas com somas e subtrações. 
 O primeiro passo consiste em converter o11o11#111#11 para +111+11-1+1*
 
 Temos 4 entradas: destino, origem, hora de início, hora de fim respectivamente.
