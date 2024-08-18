@@ -1,11 +1,7 @@
-# This is the code to be imported in https://turingmachine.io/
-
-# Adds 1 to a binary number.
 input: 'o11o11#111#11'
 blank: ' '
 start state: start
 table:
-  # scan to the rightmost digit
   start:
     'o': {write: ' ', R: negative} 
     'l': {write: ' ', R: positive} 
@@ -35,6 +31,8 @@ table:
     ' ': {write: '-', L: reset}
 
   positive:
+    '+': {R: negative}  # significa que essa é a segunda entrada
+    '-': {R: negative} # significa que essa é a segunda entrada 
     '0': R
     '1': R
     'o': R
@@ -66,7 +64,7 @@ table:
     ' ': {L: pop}
 
   pop:
-    '1': {L: reset}
+    '1': {write: ' ',L: reset}
 
   reset:
     '1': L
@@ -97,6 +95,5 @@ table:
     '+': {write: ' ', R: sum}
     '-': {write: ' ', R}
     '*': {write: ' ', R: end}
-    
-  end:
 
+  end:
