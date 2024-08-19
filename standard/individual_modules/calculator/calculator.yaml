@@ -1,0 +1,53 @@
+input: 'l111111111111111111111111111111l11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111101111111101'
+blank: ' '
+start state: start
+table:
+  start:
+
+    '+': {write: ' ', R: sum}
+    '-': {write: ' ', R: sub}
+  add_1:
+    'o': R
+    'l': R
+    '0': R
+    '*': R
+    '1': R
+    '+': R
+    '-': R
+    ' ': {write: 1, L: reset}
+
+  sub_1:
+    'o': R
+    'l': R
+    '0': R
+    '*': R
+    '1': R
+    '+': R
+    '-': R
+    ' ': {L: pop}
+
+  pop:
+    '1': {write: ' ',L: reset}
+
+  reset:
+    '1': L
+    '+': L
+    '-': L
+    'o': L
+    'l': L
+    '0': L
+    '*': L
+    ' ': {R: start}
+
+
+  sum:
+    '1': {write: '+', R: add_1}
+    '+': {write: ' ', R}
+    '-': {write: ' ', R: sub}
+    
+
+  sub:
+    '1': {write: '-', R: sub_1}
+    '+': {write: ' ', R: sum}
+    '-': {write: ' ', R}
+

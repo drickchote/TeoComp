@@ -1,0 +1,38 @@
+input: 'l111111111111111111111111111111l11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111101111111101'
+blank: ' '
+start state: start
+table:
+  start:
+    'o': {write: ' ', R: negative} 
+    'l': {write: ' ', R: positive} 
+  negative:
+    '+': {R: positive} 
+    '-': {R: positive} 
+    '0': R
+    '1': R
+    'o': R
+    'l': R
+    '*': R
+    ' ': {write: '-', L: reset}
+
+  positive:
+    '+': {R: negative} 
+    '-': {R: negative}
+    '0': R
+    '1': R
+    'o': R
+    'l': R
+    '*': R
+    ' ': {write: '+', L: reset}
+
+  reset:
+    '1': L
+    '+': L
+    '-': L
+    'o': L
+    'l': L
+    '0': L
+    '*': L
+    ' ': {R: start}
+
+ 

@@ -1,0 +1,95 @@
+input: '+*111'
+blank: ' '
+start state: start
+
+table:
+  start:
+    '+': {write: ' ', R: sum}
+    '-': {write: ' ', R: sub}
+  sum:
+    '*': {write: ' ', R: h1}
+  sub:
+    '*': {write: ' ', R: h1}
+  h1:
+    1: {write: 'x', R: h2} 
+    x: {write: ' ', L}
+  h2:
+    1: {write: 'x', R: h3} 
+    ' ': {L: print}
+  h3:
+    1: {write: 'x', R: h4} 
+    ' ': {L: print}
+  h4:
+    1: {write: 'x', R: h5} 
+    ' ': {L: print}
+  h5:
+    1: {write: 'x', R: h6} 
+    ' ': {L: print}
+  h6:
+    1: {write: 'x', R: h7} 
+    ' ': {L: print}
+  h7:
+    1: {write: 'x', R: h8} 
+    ' ': {L: print}
+  h8:
+    1: {write: 'x', R: h9} 
+    ' ': {L: print}
+  h9:
+    1: {write: 'x', R: h10} 
+    ' ': {L: print}
+  h10:
+    1: {write: 'x', R: h11} 
+    ' ': {L: print}
+  h11:
+    1: {write: 'x', R: h12} 
+    ' ': {L: print}
+  h12:
+    1: {write: 'x', R: h13} 
+    ' ': {L: print}
+  h13:
+    1: {write: 'x', R: h14} 
+    ' ': {L: print}
+  h14:
+    1: {write: 'x', R: h15} 
+    ' ': {L: print}
+  h15:
+    1: {write: 'x', R: h16} 
+    ' ': {L: print}
+  h16:
+    1: {write: 'x', R: h17} 
+    ' ': {L: print}
+  h17:
+    1: {write: 'x', R: h18} 
+    ' ': {L: print}
+  h18:
+    1: {write: 'x', R: h19} 
+    ' ': {L: print}
+  h19:
+    1: {write: 'x', R: h20} 
+    ' ': {L: print}
+  h20:
+    1: {write: 'x', R: h21} 
+    ' ': {L: print}
+  h21:
+    1: {write: 'x', R: h22} 
+    ' ': {L: print}
+  h22:
+    1: {write: 'x', R: h23} 
+    ' ': {L: print}
+  h23:
+    1: {write: 'x', R: h24} 
+    ' ': {L: print}
+  h24:
+    1: {write: 'x', R: overflow} 
+    ' ': {L: print}
+  overflow:
+    1: {L: clean}
+    ' ': {L: print}
+  clean:
+    x: {write:  ' ', L}
+    ' ': {R}
+    1: {L: restart}
+  print:
+    x: {write: 1, L}
+  restart: 
+    ' ': {R: h1}
