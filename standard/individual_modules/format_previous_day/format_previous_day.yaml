@@ -1,0 +1,76 @@
+input: '-*'
+blank: ' '
+start state: sub_1
+table:
+  start:
+  sub:
+    '1': {write: '-', R: sub_1}
+    '-': {write: ' ', R}
+  pop:
+    '1': {write: ' ',L: reset}
+    '*': {R: p1} 
+  p1:
+    ' ': {write: 1, R: p2}
+  p2:
+    ' ': {write: 1, R: p3}
+  p3:
+    ' ': {write: 1, R: p4}
+  p4:
+    ' ': {write: 1, R: p5}
+  p5:
+    ' ': {write: 1, R: p6}
+  p6:
+    ' ': {write: 1, R: p7}
+  p7:
+    ' ': {write: 1, R: p8}
+  p8:
+    ' ': {write: 1, R: p9}
+  p9:
+    ' ': {write: 1, R: p10}
+  p10:
+    ' ': {write: 1, R: p11}
+  p11:
+    ' ': {write: 1, R: p12}
+  p12:
+    ' ': {write: 1, R: p13}
+  p13:
+    ' ': {write: 1, R: p14}
+  p14:
+    ' ': {write: 1, R: p15}
+  p15:
+    ' ': {write: 1, R: p16}
+  p16:
+    ' ': {write: 1, R: p17}
+  p17:
+    ' ': {write: 1, R: p18}
+  p18:
+    ' ': {write: 1, R: p19}
+  p19:
+    ' ': {write: 1, R: p20}
+  p20:
+    ' ': {write: 1, R: p21}
+  p21:
+    ' ': {write: 1, R: p22}
+  p22:
+    ' ': {write: 1, R: p23}
+  p23:
+    ' ': {write: 1, L: reset}
+  sub_1:
+    'o': R
+    'l': R
+    '0': R
+    '*': R
+    '1': R
+    '+': R
+    '-': R
+    ' ': {L: pop}
+  reset:
+    '1': L
+    '+': L
+    '-': L
+    'o': L
+    'l': L
+    '0': L
+    '*': L
+    ' ': {R: start}
+
