@@ -99,7 +99,7 @@ destino, origem, horário de saída, duração respectivamente
 
 ## 💻 Como executar o projeto
 
-A Máquina de Turing padrão desenvolvida neste projeto pode ser visualizada e executada passo-a-passo no site **[Turing Machine Vizualization](https://turingmachine.io/)**, bastando copiar e colar o conteúdo do arquivo [standard.yaml](/standard/standard.yaml) para servir como as instruções da máquina.
+A Máquina de Turing padrão desenvolvida neste projeto pode ser visualizada e executada passo-a-passo no site **[turingmachine.io](https://turingmachine.io/)**, bastando copiar e colar o conteúdo do arquivo [standard.yaml](/standard/standard.yaml) para servir como as instruções da máquina.
 
 Já para executar a Máquina de Turing alternativa, será necessário usar o software [JFLAP](https://www.jflap.org/) e importar o arquivo [alterative.jff](/alternative/alterative.jff).
 
